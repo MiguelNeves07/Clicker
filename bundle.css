@@ -1,0 +1,211 @@
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+/* Botão de Clicar */
+#clickButton {
+    border: none;
+    background: none;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+#clickButton img {
+    width: 150px;
+    height: auto;
+    animation: rotate 8s linear infinite;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Pontuação */
+#score {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+/* Loja de Autoclickers */
+.shop {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.shop-item {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.shop-item.disabled {
+    background-color: #aaa;
+    cursor: not-allowed;
+}
+
+.shop-item:hover {
+    background-color: #45a049;
+}
+
+/* Dropdown Menu */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #45a049;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 4px;
+    overflow: hidden;
+    padding: 10px 0;
+}
+
+.dropdown-content button {
+    width: 100%;
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-content button:hover {
+    background-color: #45a049;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Menu de Salvar/Carregar */
+.menu {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.menu textarea {
+    width: calc(100% - 22px);
+    margin-bottom: 10px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+.menu button {
+    width: calc(100% - 22px);
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 14px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.menu button:hover {
+    background-color: #45a049;
+}
+
+/* Estilo da notificação de cheat */
+.cheat-notification {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background-color: #f44336;
+    color: white;
+    padding: 10px;
+    border-radius: 4px;
+    z-index: 1000;
+    animation: slide-in 0.5s forwards, fade-out 2.5s forwards;
+}
+
+@keyframes slide-in {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes fade-out {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+/* Estilo quando o cheat é ativado */
+.cheat-activated {
+    filter: grayscale(100%) invert(100%);
+    background-color: #333;
+    color: #fff;
+}
+
+.cheat-activated * {
+    color: #fff !important;
+    background-color: #333 !important;
+}
