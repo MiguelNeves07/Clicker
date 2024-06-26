@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clicker</title>
+    <link rel="stylesheet" href="bundle.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Apenas, apenas clique em mim e seja feliz.</h1>
+        <button id="clickButton">
+            <img src="https://yt3.googleusercontent.com/Ri7WMEHkDC-rxc6eDFERRivlYRCZuEg2n_uG6MTltQ7tVBZjX6UYWlTjgoer3bxIsrCK1bMJ=s176-c-k-c0x00ffffff-no-rj" alt="Botão de Clicar">
+        </button>
+        <p id="score">Pontuação: 0</p>
+        
+        <h2>Loja de Autoclickers</h2>
+        <div class="shop">
+            <button id="autoclicker1" class="shop-item" data-cost="10" data-increment="1">Autoclicker 1 (10 pontos)</button>
+            <button id="autoclicker2" class="shop-item" data-cost="20" data-increment="2">Autoclicker 2 (20 pontos)</button>
+            <button id="autoclicker3" class="shop-item" data-cost="30" data-increment="3">Autoclicker 3 (30 pontos)</button>
+        </div>
+
+        <div class="dropdown">
+            <button id="dropdownMenu" class="dropbtn">Menu</button>
+            <div id="menuDropdown" class="dropdown-content">
+                <button id="saveButton">Salvar Jogo</button>
+                <button id="loadButton">Carregar Jogo</button>
+            </div>
+        </div>
+
+        <div id="saveMenu" class="menu" style="display: none;">
+            <textarea id="saveCode" rows="5" cols="50" readonly></textarea>
+            <button id="closeSaveMenu">Fechar</button>
+        </div>
+
+        <div id="loadMenu" class="menu" style="display: none;">
+            <textarea id="loadCode" rows="5" cols="50" placeholder="Cole o código de save aqui"></textarea>
+            <button id="applyButton">Aplicar</button>
+            <button id="closeLoadMenu">Fechar</button>
+        </div>
+    </div>
+    <script src="bundle.js"></script>
+</body>
+</html>
